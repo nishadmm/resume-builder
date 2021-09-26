@@ -7,10 +7,10 @@
 * React router added For create and view pages of resume.
 * Redux used for state management.
 * Redux-form is used for create resume.
-* UI created By Bootstrap 4.
+* UI created with Bootstrap 4.
 * User skill Add section is available (has autoComplete feature) .
 * Add fields in education/experience.
-* Responsive
+* Responsive Design
 
 
 ### Demo
