@@ -1,0 +1,7 @@
+export const USER_LOGIN = "USER_LOGIN";
+export const SUBMIT_FORM = "SUBMIT_FORM";
+export const SET_SHOW_SKILL_INPUT = "SET_SHOW_SKILL_INPUT";
+export const ADD_NEW_SKILL = "ADD_NEW_SKILL";
+export const LOGS_ERROR = "LOGS_ERROR";
+export const ADD_RESUME_DATA = "ADD_RESUME_DATA";
+export const SHOW_ALERT_MESSAGE = "SHOW_ALERT_MESSAGE";

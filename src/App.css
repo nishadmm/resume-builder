@@ -1,0 +1,57 @@
+/* Avatar used in header */
+.avatar {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: rgba(208, 255, 247, 0.541);
+}
+
+/* SKill Badge */
+.skill-sample {
+  background-color: rgba(208, 255, 247, 0.341);
+  border: 1px solid rgba(159, 159, 252, 0.685);
+  color: rgba(159, 159, 252, 0.966);
+  font-size: 14px;
+}
+
+/* Resume Left Page */
+.resume-left-page:before {
+  position: absolute;
+  left: -40%;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+  content: "";
+  z-index: -1;
+  top: 0;
+}
+
+.resume-content:before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  width: 2px;
+  top: 5px;
+  bottom: 5px;
+  height: calc(100% - 5px);
+  background-color: #eeeeee;
+}
+
+/* TimeLine of resume */
+.timeline-cricle:before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  width: 20px;
+  top: -1px;
+  bottom: 5px;
+  height: 2px;
+  background-color: #eeeeee;
+}
+
+.timeline-info {
+  display: table-cell;
+  vertical-align: top;
+  padding: 5px 0 0 70px;
+}
