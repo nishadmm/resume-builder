@@ -15,13 +15,19 @@
 }
 
 /* Resume Left Page */
+.resume-left-page {
+  background-color: rgb(247, 247, 247);
+  border-radius: 10px;
+  box-shadow: 0 1px 4px 2px #76a6ff71;
+}
+
 .resume-left-page:before {
   position: absolute;
   left: -40%;
   right: 0;
   width: 100%;
   height: 100%;
-  background: #f6f6f6;
+  background: #fff;
   content: "";
   z-index: -1;
   top: 0;

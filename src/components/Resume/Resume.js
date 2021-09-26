@@ -15,10 +15,10 @@ const Resume = ({ resumeData }) => {
     // Left Card Data
     let { name, email, phoneNumber, address } = resumeData;
     LeftSideCardData = [
-      { title: "Name", value: name },
-      { title: "Email", value: email },
-      { title: "Phone Number", value: phoneNumber },
-      { title: "Address", value: address },
+      { title: "Name", value: name, icon: "user-circle" },
+      { title: "Email", value: email, icon: "envelope" },
+      { title: "Phone Number", value: phoneNumber, icon: "phone" },
+      { title: "Address", value: address, icon: "map-marker-alt" },
     ];
 
     // Right Card Data
@@ -70,7 +70,9 @@ const Resume = ({ resumeData }) => {
         <>
           <Header />
           <div className="container mt-2">
-            <h3 className="text-center text-danger">Your Awesome Resume</h3>
+            <h3 className="text-center text-info">
+              Your Awesome Resume <i class="far fa-newspaper"></i>
+            </h3>
             <div className="row justify-content-center">
               <div className="col-md-9 row align-items-center">
                 <LeftSideCard
@@ -78,14 +80,16 @@ const Resume = ({ resumeData }) => {
                   name={name}
                   skills={skills}
                 />
-                <div
-                  className="col-lg-7 border-right border-bottom border-danger resume-left-page position-relative p-4 "
-                  style={{ backgroundColor: "#f6f6f6" }}
-                >
-                  <TimeLine content={educations} title="Education:" />
+                <div className="col-lg-7 resume-left-page position-relative p-4 ">
+                  <TimeLine
+                    content={educations}
+                    title="Education:"
+                    icon="university"
+                  />
                   <TimeLine
                     content={experience}
                     title="Work &amp; Experience:"
+                    icon="building"
                   />
                 </div>
               </div>

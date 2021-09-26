@@ -50,7 +50,7 @@ const EducationInputContainer = () => {
         className="badge badge-success mt-2"
         onClick={() => setNumberOfEducation(numberOfEducation + 1)}
       >
-        Add one more education
+        <i className="fas fa-plus-circle"></i> Add one more education
       </a>
     </div>
   );

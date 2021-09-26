@@ -44,14 +44,14 @@ const FormButtons = ({
           onClick={reset}
           disabled={pristine || submitting}
         >
-          Clear All Fields
+          <i className="fas fa-minus-circle"></i> Clear All Fields
         </button>
         <button
           className="btn btn-primary"
           disabled={pristine || submitting}
           onClick={handleFormSubmit}
         >
-          Submit
+          Submit <i className="fas fa-external-link-alt"></i>
         </button>
       </div>
     </>

@@ -30,17 +30,17 @@ const Header = ({ userData: { user }, setResumeShow }) => {
                 onClick={() => setResumeShow(false)}
                 className="nav-link"
               >
-                Create Resume
+                <i className="fas fa-plus-square"></i> Create Resume
               </Link>
             </li>
             <li className="nav-item mx-auto">
               <Link to="/view" className="nav-link">
-                View Resume
+                <i className="fas fa-eye"></i> View Resume
               </Link>
             </li>
             <li className="nav-item mx-auto ">
               <Link to="/" onClick={() => auth.signOut()} className="nav-link">
-                LogOut
+                LogOut <i className="fas fa-sign-out-alt"></i>
               </Link>
             </li>
             {user && (

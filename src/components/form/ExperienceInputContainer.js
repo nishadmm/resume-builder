@@ -50,7 +50,7 @@ const ExperienceInputContainer = () => {
         className="badge badge-danger mt-2"
         onClick={() => setNumberOfExperiences(numberOfExperiences + 1)}
       >
-        Add one more experience
+        <i className="fas fa-plus-circle"></i> Add one more experience
       </a>
     </div>
   );

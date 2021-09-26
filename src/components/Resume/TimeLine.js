@@ -1,9 +1,12 @@
 import React from "react";
 
-const TimeLine = ({ content, title }) => {
+const TimeLine = ({ content, title, icon }) => {
   return (
     <div className="timeline-box mt-4">
-      <h5>{title}</h5>
+      <h5 className="text-dark">
+        {" "}
+        <i class={`fas fa-${icon}`}></i> {title}
+      </h5>
       <div className="resume-content position-relative">
         {content.map(({ topHeading, centerContent, bottonContent }, index) => (
           <div key={index} className=" mb-4 position-relative">
@@ -16,7 +19,7 @@ const TimeLine = ({ content, title }) => {
               }}
             >
               <i
-                className="far fa-circle text-danger position-absolute"
+                className="far fa-circle text-info position-absolute"
                 style={{ top: "-8px", left: "-7px" }}
               ></i>
             </div>
@@ -27,7 +30,7 @@ const TimeLine = ({ content, title }) => {
               >
                 {topHeading}
               </span>
-              <h6 className="my-2 text-danger">{centerContent}</h6>
+              <h6 className="my-2 text-info">{centerContent}</h6>
               <span>{bottonContent}</span>
             </div>
           </div>
