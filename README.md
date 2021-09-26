@@ -14,7 +14,7 @@
 
 
 ### Demo
-[https://impress-resume-builder.netlify.app/](impress-resume-builder.netlify.app)
+[impress-resume-builder.netlify.app](https://impress-resume-builder.netlify.app/)
 
 
 ### For Test Locally
