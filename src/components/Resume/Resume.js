@@ -6,9 +6,10 @@ import Header from "../Header";
 import LeftSideCard from "./LeftSideCard";
 import TimeLine from "./TimeLine";
 
-const Resume = ({ resumeData, skills }) => {
+const Resume = ({ resumeData }) => {
   let LeftSideCardData, experience, educations;
   const name = resumeData && resumeData.name;
+  const skills = resumeData && resumeData.skills;
 
   if (resumeData) {
     // Left Card Data
@@ -100,7 +101,6 @@ const Resume = ({ resumeData, skills }) => {
 
 const mapStateToProps = (state) => ({
   resumeData: state.formData.resumeData,
-  skills: state.formData.skills,
 });
 
 export default connect(mapStateToProps, null)(Resume);

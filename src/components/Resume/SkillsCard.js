@@ -15,7 +15,7 @@ const SkillsCard = ({ skills }) => {
 };
 
 const mapStateToProps = (state) => ({
-  skills: state.formData.skills,
+  skills: state.formData.resumeData.skills,
 });
 
 export default connect(mapStateToProps, null)(SkillsCard);
