@@ -16,7 +16,12 @@ import Form from "./components/form/Form";
 import Resume from "./components/Resume/Resume";
 import "./App.css";
 
-const App = ({ setCurrentUser, addResumeData, userData: { user } }) => {
+const App = ({
+  setCurrentUser,
+  addResumeData,
+  userData: { user },
+  showResume,
+}) => {
   useEffect(() => {
     return setUnsbscribeFromAuth();
     // eslint-disable-next-line
@@ -45,8 +50,14 @@ const App = ({ setCurrentUser, addResumeData, userData: { user } }) => {
     <Router>
       <Switch>
         <Route exact path="/view" component={Resume} />
-        <Route exact path="/create" component={Form} />
       </Switch>
+
+      {showResume ? (
+        <Redirect to="/view" />
+      ) : (
+        <Route exact path="/create" component={Form} />
+      )}
+
       {user ? (
         <Redirect to="/create" /> // Redircet to Resume create page when logged in
       ) : (
@@ -58,6 +69,7 @@ const App = ({ setCurrentUser, addResumeData, userData: { user } }) => {
 
 const mapStateToProps = (state) => ({
   userData: state.user,
+  showResume: state.formData.showResume,
 });
 
 export default connect(mapStateToProps, { setCurrentUser, addResumeData })(App);

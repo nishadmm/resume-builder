@@ -5,3 +5,4 @@ export const ADD_NEW_SKILL = "ADD_NEW_SKILL";
 export const LOGS_ERROR = "LOGS_ERROR";
 export const ADD_RESUME_DATA = "ADD_RESUME_DATA";
 export const SHOW_ALERT_MESSAGE = "SHOW_ALERT_MESSAGE";
+export const SET_SHOW_RESUME = "SET_SHOW_RESUME";

@@ -2,8 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { auth } from "../firebase/Firebase.utilis";
+import { setResumeShow } from "../redux/actions/FormActions";
 
-const Header = ({ userData: { user } }) => {
+const Header = ({ userData: { user }, setResumeShow }) => {
   return (
     <nav className="navbar navbar-expand-md bg-dark navbar-dark py-3 ">
       <div className="container">
@@ -24,7 +25,11 @@ const Header = ({ userData: { user } }) => {
         <div id="navmenu" className="collapse navbar-collapse">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item mx-auto mx-3">
-              <Link to="/create" className="nav-link">
+              <Link
+                to="/create"
+                onClick={() => setResumeShow(false)}
+                className="nav-link"
+              >
                 Create Resume
               </Link>
             </li>
@@ -55,4 +60,4 @@ const mapStateToProps = (state) => ({
   userData: state.user,
 });
 
-export default connect(mapStateToProps, null)(Header);
+export default connect(mapStateToProps, { setResumeShow })(Header);

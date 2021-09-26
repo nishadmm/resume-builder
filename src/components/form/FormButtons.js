@@ -1,6 +1,5 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
 import { showAlertMessage, submitForm } from "../../redux/actions/FormActions";
 import AlertMessage from "./AlertMessage";
 
@@ -15,8 +14,6 @@ const FormButtons = ({
   alertMessage,
   showAlertMessage,
 }) => {
-  const history = useHistory();
-
   // Form Submit Handler
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -35,7 +32,6 @@ const FormButtons = ({
     }
 
     submitForm({ ...form.resumeForm.values, skills: skills }, userID);
-    history.push("/view"); // push to Resume View Page
   };
 
   return (
@@ -50,14 +46,13 @@ const FormButtons = ({
         >
           Clear All Fields
         </button>
-        <Link
-          to="/view"
+        <button
           className="btn btn-primary"
           disabled={pristine || submitting}
           onClick={handleFormSubmit}
         >
           Submit
-        </Link>
+        </button>
       </div>
     </>
   );

@@ -5,6 +5,7 @@ import {
   LOGS_ERROR,
   ADD_RESUME_DATA,
   SHOW_ALERT_MESSAGE,
+  SET_SHOW_RESUME,
 } from "./Types";
 import { getUserResumeFromDB } from "../../firebase/Firebase.utilis";
 
@@ -18,6 +19,11 @@ export const submitForm = (values, userID) => async (dispatch) => {
   } catch (error) {
     dispatch({ type: LOGS_ERROR, payload: error });
   }
+};
+
+// Set resume show
+export const setResumeShow = (value) => {
+  return { type: SET_SHOW_RESUME, payload: value };
 };
 
 // Set Skill Input Showing

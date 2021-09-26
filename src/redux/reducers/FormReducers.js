@@ -5,6 +5,7 @@ import {
   LOGS_ERROR,
   ADD_RESUME_DATA,
   SHOW_ALERT_MESSAGE,
+  SET_SHOW_RESUME,
 } from "../actions/Types";
 
 const initialState = {
@@ -45,7 +46,15 @@ const FormReducer = (state = initialState, action) => {
       return {
         ...state,
         resumeData: action.payload,
+        showResume: true,
       };
+
+    case SET_SHOW_RESUME: //set show resume
+      return {
+        ...state,
+        showResume: action.payload,
+      };
+
     case SET_SHOW_SKILL_INPUT: // Skill Add input Open & Close
       return {
         ...state,
