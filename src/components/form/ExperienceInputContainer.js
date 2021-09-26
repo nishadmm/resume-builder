@@ -13,7 +13,7 @@ const ExperienceInputContainer = () => {
         .fill()
         .map((_, index) => (
           <div className="row mb-2" key={index}>
-            <div className="col">
+            <div className="col-md d-block mb-2 mb-md-0">
               <Field
                 component="input"
                 type="text"
@@ -23,7 +23,7 @@ const ExperienceInputContainer = () => {
                 placeholder="Enter Company Name"
               />
             </div>
-            <div className="col">
+            <div className="col-md d-block mb-2 mb-md-0">
               <Field
                 component="input"
                 type="number"
@@ -33,7 +33,7 @@ const ExperienceInputContainer = () => {
                 placeholder="Years ( eg: 1 Year )"
               />
             </div>
-            <div className="col">
+            <div className="col-md d-block mb-2 mb-md-0">
               <Field
                 component="input"
                 type="text"

@@ -29,7 +29,7 @@ const AddSkillInput = ({ formData, form, setShowSkillInput, addNewSkill }) => {
         component="input"
         list="skills"
         name="user_skill"
-        className="form-control col-4 m-2"
+        className="form-control col-10 col-md-4 m-2"
         placeholder="Add skill like PHP, Javascript "
         autoFocus={true}
       />
